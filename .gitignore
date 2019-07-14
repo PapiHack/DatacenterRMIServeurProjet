@@ -1,0 +1,4 @@
+bin/dao/*
+bin/domaine/*
+bin/metier/*
+dao/service/*
