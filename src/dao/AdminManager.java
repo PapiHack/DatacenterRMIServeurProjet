@@ -82,11 +82,12 @@ public class AdminManager implements AdminDAOInterface
 			this.statement = this.connexion.prepareStatement("UPDATE admin SET nom = ?, prenom = ? WHERE id = ?");
 			this.statement.setString(1, admin.getNom());
 			this.statement.setString(2, admin.getPrenom());
+			this.statement.setInt(3, admin.getId());
 			this.statement.executeUpdate();
 		}
 		catch(Exception e) 
 		{
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		
 	}
