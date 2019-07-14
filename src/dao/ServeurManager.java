@@ -72,8 +72,8 @@ public class ServeurManager implements ServeurDAOInterface
 		       while(this.result.next()) 
 		       {
 		    	   Admin admin = this.adminManager.findById(this.result.getInt("admin"));
-		    	   Salle salle = this.salleManager.findById(this.result.getString("numsalle"));
-		    	   Serveur serveur = new Serveur(this.result.getString("num"), this.result.getString("nom"), admin, salle);
+		    	   Salle salle = this.salleManager.findById(this.result.getString("salle"));
+		    	   Serveur serveur = new Serveur(this.result.getString("numserv"), this.result.getString("nomserv"), admin, salle);
 		    	   liste.add(serveur);
 		       }
 		 }
@@ -116,7 +116,7 @@ public class ServeurManager implements ServeurDAOInterface
 			{
 				Admin admin = this.adminManager.findById(this.result.getInt("admin"));
 				Salle salle = this.salleManager.findById(this.result.getString("salle"));
-				serveur = new Serveur(this.result.getString("num"), this.result.getString("nom"), admin, salle);
+				serveur = new Serveur(this.result.getString("numserv"), this.result.getString("nomserv"), admin, salle);
 			}
 		}
 		catch(Exception e) 
@@ -154,8 +154,8 @@ public class ServeurManager implements ServeurDAOInterface
 		       while(this.result.next()) 
 		       {
 		    	   Admin admin = this.adminManager.findById(this.result.getInt("admin"));
-		    	   Salle room = this.salleManager.findById(this.result.getString("numsalle"));
-		    	   Serveur serveur = new Serveur(this.result.getString("num"), this.result.getString("nom"), admin, room);
+		    	   Salle room = this.salleManager.findById(this.result.getString("salle"));
+		    	   Serveur serveur = new Serveur(this.result.getString("numserv"), this.result.getString("nomserv"), admin, room);
 		    	   liste.add(serveur);
 		       }
 		 }
@@ -178,8 +178,8 @@ public class ServeurManager implements ServeurDAOInterface
 		       while(this.result.next()) 
 		       {
 		    	   Admin administrateur = this.adminManager.findById(this.result.getInt("admin"));
-		    	   Salle room = this.salleManager.findById(this.result.getString("numsalle"));
-		    	   Serveur serveur = new Serveur(this.result.getString("num"), this.result.getString("nom"), administrateur, room);
+		    	   Salle room = this.salleManager.findById(this.result.getString("salle"));
+		    	   Serveur serveur = new Serveur(this.result.getString("numserv"), this.result.getString("nomserv"), administrateur, room);
 		    	   liste.add(serveur);
 		       }
 		 }

@@ -63,6 +63,7 @@ public class AdminManager implements AdminDAOInterface
 		       while(this.result.next()) 
 		       {
 		    	   Admin admin = new Admin(this.result.getString("nom"), this.result.getString("prenom"));
+		    	   admin.setId(Integer.parseInt(this.result.getString("id")));
 		    	   liste.add(admin);
 		       }
 		 }
@@ -102,6 +103,7 @@ public class AdminManager implements AdminDAOInterface
 			if(this.result.next()) 
 			{
 				admin = new Admin(this.result.getString("nom"), this.result.getString("prenom"));
+				admin.setId(Integer.parseInt(this.result.getString("id")));
 			}
 		}
 		catch(Exception e) 
